@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    height: 100%;
+   
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "sidebar"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr auto 1fr;
+}
+.header{
+    grid-area: header;
+    background-color: rgb(247, 203, 248);
+    width: 400px;
+}
+.section{
+    grid-area: section;
+    background-color: rgb(218, 155, 218);
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(240, 175, 226);
+}
+.main{
+    grid-area: main;
+    background-color: rgb(241, 165, 212);
+}
+.footer{
+    grid-area: footer;
+    background-color: rgb(248, 138, 248);
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.hada{
+    height: 60%;
+}
+.btn_menu{
+    padding: 50px;
+}
+
+.grid-container-header-menu{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.menu_items_a ul li{
+    list-style-type: none;
+    display: flex;
+}
+.menu_item{
+    display: none;
+}
+.filtro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-select{
+    width: 60%;
+}
+
+.cards{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    align-content: space-evenly;
+    
+}
+.card-img-top{
+    height: 350px;
+    width: 350px;
+    
+}
+.card-title{
+    height: fit-content;
+}
+.btn-primary{
+    height: 40px;
+}
+.footer-text-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 576px) {
+    .grid-container{
+        display: grid;
+        background-color: white;
+        grid-template-columns: 15% 85%;
+        grid-template-rows: 15% auto 15%;
+        grid-template-areas:
+        "header sidebar"
+        "header main"
+        "footer footer"
+    }
+    .grid-container-header-menu{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .grid-container-header-menu{
+        display: flex;
+        justify-content: start;
+        margin: 40px;
+    }
+    .logo{
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+    }
+    
+    .menu_item{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu_icono_hamburguesa{
+        display: none;
+    }
+    .menu_items_a ul li{
+        font-size: 14px;
+        padding-top: 0%;
+    }
+    
+    .main{
+        display: grid;
+        padding: 5px;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background-size: cover;
+        overflow-y: hidden;
+    }
+    .card{
+        width: 20%px;
+        height: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card img{
+        width: 200px;
+        height: 200px;
+    }
+    img .card-img-top{
+        padding: 5px;
+        width: 100px;
+    }
+    .card-body a{
+        justify-items: center;
+        align-items: center;
+    }
+    
+    
+}
